@@ -34,6 +34,15 @@
 
 }
 
+.subtituloGrisBold{
+	color: #252839;
+	margin-left: auto;
+	text-align: center;
+	font-size: 1em;
+	padding-top: 1em;
+	font-weight: bold;
+}
+
 .separadorAmarillo{
 	width: 30%;
 	border-bottom:2px solid #f2b632;;
@@ -91,7 +100,7 @@
 
 
 
-/*cosas de la pagina skills*/
+/*___cosas de la pagina skills___*/
 
 
 .unityColor{
@@ -213,3 +222,64 @@
 body{
 	scroll-behavior: smooth;
 }
+
+
+/*_____Imagenes del portafolio____*/
+
+.card-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.card-img-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.3);
+  opacity: 0;
+  transition: opacity .25s;
+
+}
+.card-img-wrap .imagenZoom {
+  transition: transform .25s;
+  width: 100%;
+  -webkit-filter: grayscale(0%); 
+  filter: grayscale(0%);
+}
+.card-img-wrap:hover .imagenZoom {
+  transform: scale(1.2);
+     -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%);
+}
+.card-img-wrap:hover:after {
+  opacity: 1;
+   -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%);
+}
+
+.middle {
+  transition: .5s ease;
+  opacity:0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  
+}
+
+
+.card-img-wrap:hover .middle {
+  opacity: 1;
+}
+
+.textMiddle {
+  background-color: #f2b632;
+  color: #252839;
+  font-size: 18px;
+  padding: 16px 32px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px #000;
+  font-weight:bold;
+}
+
